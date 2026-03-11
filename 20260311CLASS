@@ -1,0 +1,235 @@
+# Python 2주차 학습 정리
+
+## 📚 학습 내용
+이번 2주차 수업에서는 Python의 기본 연산자, 변수 활용, 리스트(List) 자료형을 학습하고  
+이를 활용한 다양한 계산 문제와 리스트 활용 실습을 진행하였다.
+
+---
+
+# 1️⃣ Python 기본 연산자
+
+파이썬에서 사용하는 기본 연산자는 다음과 같다.
+
+| 연산자 | 의미 |
+|---|---|
+| + | 덧셈 |
+| - | 뺄셈 |
+| * | 곱셈 |
+| / | 나눗셈 |
+| // | 몫 |
+| % | 나머지 |
+| ** | 거듭제곱 |
+
+### 예제 코드
+
+```python
+print(5 + 2)
+print(5 - 2)
+print(5 * 2)
+print(5 / 2)
+print(5 // 2)
+print(5 % 2)
+print(5 ** 2)
+2️⃣ 변수 활용
+
+변수는 값을 저장하는 공간이다.
+
+x = 10
+y = 20
+z = x + y
+
+print(z)
+변수 이름 규칙
+
+✔ 가능
+
+영어
+
+숫자
+
+언더바 _
+
+한글
+
+❌ 불가능
+
+숫자로 시작
+
+공백
+
+특수문자
+
+파이썬 예약어
+
+예시
+math_score = 95
+x1 = 100
+수학 = 80
+3️⃣ 단위 변환 문제
+cm → inch
+
+1 inch = 2.54 cm
+
+cm = 90
+inch = cm / 2.54
+
+print(inch)
+키 변환 (cm → feet + inch)
+
+1 feet = 12 inch
+
+cm = 170
+
+inch = cm / 2.54
+feet = inch // 12
+remain = inch % 12
+
+print(feet, "feet", remain, "inch")
+4️⃣ 등록금 계산
+tuition = 3575000
+
+total_4years = tuition * 8
+next_year = tuition * 1.067
+future = tuition * 1.047 ** 10
+
+print(total_4years)
+print(next_year)
+print(future)
+5️⃣ 리스트(List)
+
+리스트는 하나의 변수에 여러 데이터를 저장하는 자료형이다.
+
+scores = [90, 80, 70, 60, 50]
+
+print(scores)
+6️⃣ 리스트 생성
+빈 리스트
+a = []
+b = list()
+값이 있는 리스트
+a = [10, 20, 30]
+7️⃣ range 함수
+a = list(range(1,11))
+print(a)
+
+결과
+
+[1,2,3,4,5,6,7,8,9,10]
+8️⃣ 리스트 인덱싱
+
+리스트 인덱스는 0부터 시작한다
+
+a = [10,20,30]
+
+print(a[0])
+print(a[1])
+print(a[2])
+9️⃣ 리스트 슬라이싱
+arr = [0,1,2,3,4,5,6,7,8,9]
+
+print(arr[2:5])
+print(arr[:5])
+print(arr[2:])
+print(arr[:])
+🔟 리스트 데이터 추가
+append()
+a = [10,20,30]
+
+a.append(40)
+
+print(a)
+insert()
+a = [1,2,3,4]
+
+a.insert(1,10)
+
+print(a)
+extend()
+a = [1,2,3]
+b = [4,5,6]
+
+a.extend(b)
+
+print(a)
+1️⃣1️⃣ 실습 문제
+과일 가격 계산
+apple = 1500
+pear = 2800
+
+buy_apples = apple * 20
+buy_pears = pear * 15
+
+total = buy_apples + buy_pears
+discount = total * 0.85
+
+print(total)
+print(discount)
+원리금 계산
+money = 5000000
+rate = 0.0325
+
+interest = money * rate
+total = money + interest
+
+print(total)
+세금 고려 이자 계산
+money = 15000000
+rate = 0.0325
+tax_rate = 0.154
+
+interest = money * rate
+tax = interest * tax_rate
+
+receive = interest - tax
+
+print(receive)
+환전 계산
+money = 1500000
+rate = 1135
+
+dollar = money / rate
+
+print(dollar)
+피자 넓이 계산
+diameter = 45
+radius = diameter / 2
+pi = 3.14
+
+area = radius * radius * pi
+slice_area = area / 8
+
+print(slice_area)
+1️⃣2️⃣ 반복문 + 리스트
+scores = []
+
+for i in range(5):
+    value = int(input("성적 입력: "))
+    scores.append(value)
+
+print(scores)
+합계 평균 계산
+sum_score = 0
+
+for i in range(5):
+    sum_score += scores[i]
+
+print(sum_score)
+print(sum_score / 5)
+1️⃣3️⃣ Dictionary 활용
+stdDict = {
+'학번':20230844,
+'이름':'박지안',
+'학과':'소프트웨어'
+}
+
+print(stdDict['학번'])
+print(stdDict['이름'])
+print(stdDict['학과'])
+데이터 추가
+stdDict['학교'] = '성결대학교'
+데이터 삭제
+del stdDict['학번']
+
+✍️작성자: 박지안
+🐧실습 환경: Visual Studio 2022
+🗓️ 작업일: 2026-03-11
